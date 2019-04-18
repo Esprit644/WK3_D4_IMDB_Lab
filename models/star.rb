@@ -4,7 +4,8 @@ require_relative('movie.rb')
 
 class Star
 
-  attr_reader :first_name, :last_name, :id
+  attr_reader :id
+  attr_accessor :first_name, :last_name
 
   def initialize(options)
     @first_name = options['first_name']
@@ -26,6 +27,14 @@ class Star
     values = [@first_name, @last_name]
     results = SqlRunner.run(sql, values).first
     @id = results['id'].to_i
+  end
+
+  def update()
+    sql = "UPDATE stars
+    SET (first_name, last_name) = ($1,$2)
+    WHERE id = $3;"
+    values = [@first_name, @last_name, @id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all()

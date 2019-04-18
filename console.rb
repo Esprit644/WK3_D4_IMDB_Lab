@@ -34,6 +34,14 @@ casting2.save()
 casting3.save()
 casting4.save()
 
+# movie4.title = 'small'
+# movie4.update()
+# movie4.save()
+
+# star1.first_name = 'Chuck'
+# star1.update()
+# star1.save()
+
 
 
 

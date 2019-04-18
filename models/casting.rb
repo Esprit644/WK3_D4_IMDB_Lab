@@ -30,6 +30,7 @@ class Casting
     results = SqlRunner.run(sql, values).first
     @id = results['id'].to_i
   end
+  
 
   def self.all()
     sql = "SELECT * FROM castings;"
