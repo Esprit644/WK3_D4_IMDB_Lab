@@ -28,9 +28,20 @@ class Star
     @id = results['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM stars;"
+    stars = SqlRunner.run(sql)
+    result = Star.map_items(stars)
+  end
+
   def self.delete_all()
     sql ="DELETE FROM stars;"
     SqlRunner.run(sql)
+  end
+
+  def self.map_items(star_data)
+    results = star_data.map { |star| Star.new(star) }
+    return results
   end
 
 
