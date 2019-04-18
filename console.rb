@@ -8,13 +8,13 @@ Movie.delete_all()
 Star.delete_all()
 
 
-movie1 = Movie.new({'title' => 'Kelly Heroes', 'genre' => 'action'})
+movie1 = Movie.new({'title' => 'Kelly Heroes', 'genre' => 'action', 'budget' => '100_000' })
 movie1.save()
-movie2 = Movie.new({'title' => 'Back to the Future', 'genre' => 'scifi'})
+movie2 = Movie.new({'title' => 'Back to the Future', 'genre' => 'scifi', 'budget' => '100_000'})
 movie2.save()
-movie3 = Movie.new({'title' => 'Big', 'genre' => 'comedy'})
+movie3 = Movie.new({'title' => 'Big', 'genre' => 'comedy', 'budget' => '100_000'})
 movie3.save()
-movie4 = Movie.new({'title' => 'Sully', 'genre' => 'action'})
+movie4 = Movie.new({'title' => 'Sully', 'genre' => 'action', 'budget' => '100_000'})
 movie4.save()
 
 
@@ -28,13 +28,15 @@ star3.save()
 casting1 = Casting.new({'movie_id' => movie1.id, 'star_id' => star1.id, 'fee' => '10'})
 casting2 = Casting.new({'movie_id' => movie2.id, 'star_id' => star2.id, 'fee' => '10_000'})
 casting3 = Casting.new({'movie_id' => movie3.id, 'star_id' => star3.id, 'fee' => '30_000'})
-casting4 = Casting.new({'movie_id' => movie4.id, 'star_id' => star3.id, 'fee' => '120_000'})
+casting4 = Casting.new({'movie_id' => movie4.id, 'star_id' => star3.id, 'fee' => '30_000'})
+casting5 = Casting.new({'movie_id' => movie4.id, 'star_id' => star2.id, 'fee' => '12_000'})
+
 casting1.save()
 casting2.save()
 casting3.save()
 casting4.save()
+casting5.save()
 
-movie1.delete()
 
 # movie4.title = 'small'
 # movie4.update()
