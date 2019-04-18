@@ -34,6 +34,8 @@ casting2.save()
 casting3.save()
 casting4.save()
 
+movie1.delete()
+
 # movie4.title = 'small'
 # movie4.update()
 # movie4.save()
